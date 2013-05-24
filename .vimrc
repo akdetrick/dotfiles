@@ -28,12 +28,17 @@ set path+=/usr/local/meetup/**,~/dev/**
 
 
 " indentation
-set modelines=0
+set listchars=tab:`\ ,trail:~,extends:>,precedes:<
+set list
 set smartindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
+set modelines=0
+set shiftwidth=3
+set tabstop=3
+set shiftwidth=3
+set noexpandtab
+autocmd FileType python set tabstop=4
+autocmd FileType python set shiftwidth=4
+autocmd FileType python set expandtab
 
 " Mode stuff
 set history=50
