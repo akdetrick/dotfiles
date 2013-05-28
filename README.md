@@ -5,4 +5,4 @@ dotfiles
 
 
 ### one liner installation
-  cd ~/dev; git clone https://github.com/akdetrick/dotfiles.git; ./install.sh
+`cd ~/dev; git clone https://github.com/akdetrick/dotfiles.git; ./install.sh`
