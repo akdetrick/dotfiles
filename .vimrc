@@ -18,14 +18,16 @@ call pathogen#helptags()
 syntax on
 syntax enable
 filetype plugin indent on
+
+" file types
 autocmd BufRead *.jinc set filetype=jsp
 autocmd BufRead *.email set filetype=velocity
 autocmd BufRead *.email.html set filetype=velocity
+autocmd BufRead *.py set filetype=python
 
 set nocompatible
 
 set path+=/usr/local/meetup/**,~/dev/**
-
 
 " indentation
 set listchars=tab:`\ ,trail:~,extends:>,precedes:<
