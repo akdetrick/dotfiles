@@ -22,13 +22,13 @@ read -p "WARNING!!!! This installation will rewrite local dotfiles without savin
 		done
 		rm pathogen-bundles.txt
 
-		#echo "~~~~~~~~ installing powerline-bash..."
-		#cd ~/dev/dotfiles/powerline-bash
-		#./install.py
-		#ln -s $DOTFILES_PATH/powerline-bash/powerline-shell.py ~/powerline-shell.py
+		echo "~~~~~~~~ installing powerline-bash..."
+		cd ~/dev/dotfiles/powerline-bash
+		python install.py
+		ln -s $DOTFILES_PATH/powerline-bash/powerline-shell.py ~/powerline-shell.py
 
-		#echo "=== NOTE: powerline-bash requires an addition in .bashrc (will fix this later) ==="
-		#echo "=== see https://github.com/akdetrick/powerline-bash/blob/master/README.md ==="
+		echo "=== NOTE: powerline-bash requires an addition in .bashrc (will fix this later) ==="
+		echo "=== see https://github.com/akdetrick/powerline-bash/blob/master/README.md ==="
 
 	else
 		echo "Aborting installation"
