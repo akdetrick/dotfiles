@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# UPDATE - pulls updates for all installed vim-pathogen bundles; maybe more later
+
 DOTFILES_PATH=~/dev/dotfiles
 
 echo "updating vim bundles..."

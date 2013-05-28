@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# INSTALL
+
 DOTFILES_PATH=~/dev/dotfiles
 
 echo "configuring vim..."

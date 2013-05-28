@@ -3,18 +3,18 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " installed bundles
-" START_BUNDLES
-" git://github.com/scrooloose/nerdcommenter.git
-" git://github.com/tpope/vim-surround.git
-" git://github.com/tsaleh/vim-supertab.git
-" git://github.com/tpope/vim-eunuch.git
-" git://github.com/tpope/vim-haml.git
-" git://github.com/tpope/vim-liquid.git
-" git://github.com/tpope/vim-markdown.git
-" git://github.com/Lokaltog/vim-powerline.git
-" git://github.com/altercation/vim-colors-solarized.git
-" git://github.com/nathanaelkane/vim-indent-guides.git
-" END_BUNDLES
+"<pathogen>
+	"<bundle>git://github.com/scrooloose/nerdcommenter.git</bundle>
+	"<bundle>git://github.com/tpope/vim-surround.git</bundle>
+	"<bundle>git://github.com/tsaleh/vim-supertab.git</bundle>
+	"<bundle>git://github.com/tpope/vim-eunuch.git</bundle>
+	"<bundle>git://github.com/tpope/vim-haml.git</bundle>
+	"<bundle>git://github.com/tpope/vim-liquid.git</bundle>
+	"<bundle>git://github.com/tpope/vim-markdown.git</bundle>
+	"<bundle>git://github.com/Lokaltog/vim-powerline.git</bundle>
+	"<bundle>git://github.com/altercation/vim-colors-solarized.git</bundle>
+	"<bundle>git://github.com/nathanaelkane/vim-indent-guides.git</bundle>
+"</pathogen>
 
 " syntax
 syntax on
