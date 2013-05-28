@@ -3,6 +3,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " installed bundles
+" START_BUNDLES
 " git://github.com/scrooloose/nerdcommenter.git
 " git://github.com/tpope/vim-surround.git
 " git://github.com/tsaleh/vim-supertab.git
@@ -13,6 +14,7 @@ call pathogen#helptags()
 " git://github.com/Lokaltog/vim-powerline.git
 " git://github.com/altercation/vim-colors-solarized.git
 " git://github.com/nathanaelkane/vim-indent-guides.git
+" END_BUNDLES
 
 " syntax
 syntax on
