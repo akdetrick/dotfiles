@@ -3,6 +3,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " installed bundles
+" xml to make for easy/magic bash installation with sed
 "<pathogen>
 	"<bundle>git://github.com/scrooloose/nerdcommenter.git</bundle>
 	"<bundle>git://github.com/tpope/vim-surround.git</bundle>
