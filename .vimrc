@@ -63,10 +63,9 @@ set ttyfast
 set ruler
 set foldmethod=marker
 set number
-                                                                                                                                                                                
+
 " movement
 set ignorecase
-set smartcase
 set showmatch
 
 " leader key

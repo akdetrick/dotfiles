@@ -4,8 +4,10 @@
 
 DOTFILES_PATH=~/dev/dotfiles
 
-echo "updating vim bundles..."
+cd $DOTFILES_PATH
+git pull
 
+echo "~~~~~~~~ updating vim bundles..."
 cd ~/.vim/bundle
 for directory in `ls ~/.vim/bundle`
 do
