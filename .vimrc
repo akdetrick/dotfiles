@@ -81,7 +81,10 @@ nnoremap <leader>w <C-w><C-w>
 nnoremap <leader>s <C-w><C-v> 
 
 " build mappings
-" nnoremap <leader>b :w <CR> :! {shell cmd for some build process} <CR>
+nnoremap <leader>b :w <CR> :! ant -buildfile /usr/local/meetup/build.xml jsp static<CR>
+nnoremap <leader>p :w <CR> :! ant -buildfile /usr/local/meetup/build.xml jsp<CR>
+nnoremap <leader>j :w <CR> :! ant -buildfile /usr/local/meetup/build.xml js_fast<CR>
+nnoremap <leader>c :w <CR> :! ant -buildfile /usr/local/meetup/build.xml css<CR>
 
 " insert mappings
 imap jj <Esc>
