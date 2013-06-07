@@ -15,3 +15,4 @@ dotfiles
 ### updating plugins/tools
 `cd ~/dev; ./update.sh`
 
+asdf
