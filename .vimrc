@@ -15,6 +15,7 @@ call pathogen#helptags()
 	"<bundle>git://github.com/Lokaltog/vim-powerline.git</bundle>
 	"<bundle>git://github.com/altercation/vim-colors-solarized.git</bundle>
 	"<bundle>git://github.com/nathanaelkane/vim-indent-guides.git</bundle>
+	"<bundle>git://github.com/juvenn/mustache.vim.git</bundle>
 "</pathogen>
 
 " syntax
