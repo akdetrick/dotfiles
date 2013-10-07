@@ -1,4 +1,4 @@
-filetype off                                                                                                                                                                       
+filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -16,6 +16,7 @@ call pathogen#helptags()
 	"<bundle>git://github.com/altercation/vim-colors-solarized.git</bundle>
 	"<bundle>git://github.com/nathanaelkane/vim-indent-guides.git</bundle>
 	"<bundle>git://github.com/scrooloose/nerdtree.git</bundle>
+	"<bundle>git://github.com/juvenn/mustache.vim.git</bundle>
 "</pathogen>
 
 " syntax
@@ -112,4 +113,3 @@ if v:version >= 700
   autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
   autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en
 endif
-                                                                                                                                                               
