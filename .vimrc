@@ -101,6 +101,9 @@ if has('gui_running')
   colorscheme solarized
 endif
 
+" tab completion
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
 " indent guides
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
