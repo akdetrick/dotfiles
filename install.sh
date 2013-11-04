@@ -30,6 +30,9 @@ read -p "WARNING!!!! This installation will rewrite local dotfiles without savin
 		#echo "=== NOTE: powerline-bash requires an addition in .bashrc (will fix this later) ==="
 		#echo "=== see https://github.com/akdetrick/powerline-bash/blob/master/README.md ==="
 
+		echo "~~~~~~~~ linking git completion..."
+		ln -s $DOTFILES_PATH/.git-completion.bash ~/.git-completion.bash
+
 	else
 		echo "Aborting installation"
 fi
