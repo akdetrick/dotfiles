@@ -16,6 +16,7 @@ call pathogen#helptags()
 	"<bundle>git://github.com/altercation/vim-colors-solarized.git</bundle>
 	"<bundle>git://github.com/nathanaelkane/vim-indent-guides.git</bundle>
 	"<bundle>git://github.com/juvenn/mustache.vim.git</bundle>
+	"<bundle>git://github.com/mattn/emmet-vim.git</bundle>
 "</pathogen>
 
 " syntax
@@ -97,6 +98,12 @@ if has('gui_running')
   colorscheme solarized
 endif
 
+" spelling (text only)
+if v:version >= 700
+  autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
+  autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en
+endif
+
 " indent guides
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
@@ -104,9 +111,6 @@ let g:indent_guides_start_level = 2
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#b58900   ctermbg=190
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#cb4b16 ctermbg=166
 
-" spelling (text only)
-if v:version >= 700
-  autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
-  autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en
-endif
-                                                                                                                                                               
+" emmet settings
+let g:user_emmet_install_global = 0
+autocmd BufNewFile,BufRead *.mustache,*.html,*.scss,*.css,*.jsp EmmetInstall
