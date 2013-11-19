@@ -104,13 +104,13 @@ if v:version >= 700
   autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en
 endif
 
+" emmet settings
+let g:user_emmet_install_global = 0
+autocmd BufNewFile,BufRead *.mustache,*.html,*.jsp EmmetInstall
+
 " indent guides
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#b58900   ctermbg=190
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#cb4b16 ctermbg=166
-
-" emmet settings
-let g:user_emmet_install_global = 0
-autocmd BufNewFile,BufRead *.mustache,*.html,*.scss,*.css,*.jsp EmmetInstall
