@@ -22,6 +22,9 @@ read -p "WARNING!!!! This installation will rewrite local dotfiles without savin
 		done
 		rm pathogen-bundles.txt
 
+		echo "~~~~~~~~ configuring iterm2..."
+		ln -s $DOTFILES_PATH/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
+
 		#echo "~~~~~~~~ installing powerline-bash..."
 		#cd ~/dev/dotfiles/powerline-bash
 		#python install.py

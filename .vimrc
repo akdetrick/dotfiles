@@ -105,8 +105,8 @@ if v:version >= 700
 endif
 
 " emmet settings
-let g:user_emmet_install_global = 0
-autocmd BufNewFile,BufRead *.mustache,*.html,*.jsp EmmetInstall
+"let g:user_emmet_install_global = 0
+"autocmd BufNewFile,BufRead *.mustache,*.html,*.jsp EmmetInstall
 
 " indent guides
 let g:indent_guides_auto_colors = 0
