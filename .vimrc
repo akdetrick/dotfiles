@@ -6,6 +6,7 @@ call pathogen#helptags()
 " xml to make for easy/magic bash installation with sed
 "<pathogen>
 	"<bundle>git://github.com/scrooloose/nerdcommenter.git</bundle>
+	"<bundle>git://github.com/scrooloose/nerdtree.git</bundle>
 	"<bundle>git://github.com/tpope/vim-surround.git</bundle>
 	"<bundle>git://github.com/tsaleh/vim-supertab.git</bundle>
 	"<bundle>git://github.com/tpope/vim-eunuch.git</bundle>
@@ -78,9 +79,10 @@ set nowrap
 
 " leader mappings 
 nnoremap <leader>a :Ack
+nnoremap <leader>o :NERDTree<CR>
 nnoremap <leader>v V`]
 nnoremap <leader>w <C-w><C-w>
-nnoremap <leader>s <C-w><C-v> 
+nnoremap <leader>s <C-w><C-v>
 
 " build mappings
 " nnoremap <leader>b :w <CR> :! {shell cmd for some build process} <CR>
