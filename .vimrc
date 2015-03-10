@@ -45,9 +45,9 @@ set shiftwidth=3
 set tabstop=3
 set shiftwidth=3
 set noexpandtab
-autocmd FileType python set tabstop=4
-autocmd FileType python set shiftwidth=4
-autocmd FileType python set expandtab
+autocmd FileType python setlocal tabstop=4
+autocmd FileType python setlocal shiftwidth=4
+autocmd FileType python setlocal expandtab
 
 " Mode stuff
 set history=50
