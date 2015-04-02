@@ -6,6 +6,7 @@ call pathogen#helptags()
 " xml to make for easy/magic bash installation with sed
 "<pathogen>
 	"<bundle>git://github.com/scrooloose/nerdcommenter.git</bundle>
+	"<bundle>git://github.com/scrooloose/nerdtree.git</bundle>
 	"<bundle>git://github.com/tpope/vim-surround.git</bundle>
 	"<bundle>git://github.com/tsaleh/vim-supertab.git</bundle>
 	"<bundle>git://github.com/tpope/vim-eunuch.git</bundle>
@@ -13,10 +14,11 @@ call pathogen#helptags()
 	"<bundle>git://github.com/tpope/vim-liquid.git</bundle>
 	"<bundle>git://github.com/tpope/vim-markdown.git</bundle>
 	"<bundle>git://github.com/Lokaltog/vim-powerline.git</bundle>
-	"<bundle>git://github.com/altercation/vim-colors-solarized.git</bundle>
 	"<bundle>git://github.com/nathanaelkane/vim-indent-guides.git</bundle>
 	"<bundle>git://github.com/scrooloose/nerdtree.git</bundle>
-	"<bundle>git://github.com/juvenn/mustache.vim.git</bundle>
+	"<bundle>git://github.com/mattn/emmet-vim.git</bundle>
+	"<bundle>git://github.com/mustache/vim-mustache-handlebars</bundle>
+	"<bundle>git://github.com/derekwyatt/vim-scala</bundle>
 "</pathogen>
 
 " syntax
@@ -76,17 +78,20 @@ let mapleader=","
 " wrapping
 set nowrap
 
-" leader mappings 
+" leader mappings
 nnoremap <leader>a :Ack
+nnoremap <leader>o :NERDTree<CR>
 nnoremap <leader>v V`]
 nnoremap <leader>w <C-w><C-w>
-nnoremap <leader>s <C-w><C-v> 
+nnoremap <leader>s <C-w><C-v>
 
 " build mappings
 nnoremap <leader>b :w <CR> :! ant -buildfile /usr/local/meetup/build.xml jsp static<CR>
 nnoremap <leader>p :w <CR> :! ant -buildfile /usr/local/meetup/build.xml jsp<CR>
-nnoremap <leader>j :w <CR> :! ant -buildfile /usr/local/meetup/build.xml js<CR>
-nnoremap <leader>c :w <CR> :! ant -buildfile /usr/local/meetup/build.xml css<CR>
+nnoremap <leader>o :w <CR> :! ant -buildfile /usr/local/meetup/build.xml meetstache<CR>
+nnoremap <leader>j :w <CR> :! grunt js --verbose<CR>
+nnoremap <leader>m :w <CR> :! grunt mu --verbose<CR>
+nnoremap <leader>c :w <CR> :! grunt css --verbose<CR>
 
 " insert mappings
 imap jj <Esc>
@@ -95,14 +100,15 @@ imap uu _
 " visual
 set linespace=2
 set laststatus=2
-set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
-if has('gui_running')
-  set background=dark
-  colorscheme solarized
-endif
 
 " tab completion
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+autocmd FileType python let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
+" spelling (text only)
+if v:version >= 700
+  autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
+  autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en
+endif
 
 " indent guides
 let g:indent_guides_auto_colors = 0
@@ -110,9 +116,3 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#b58900   ctermbg=190
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#cb4b16 ctermbg=166
-
-" spelling (text only)
-if v:version >= 700
-  autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
-  autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en
-endif
