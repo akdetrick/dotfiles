@@ -13,6 +13,9 @@ read -p "WARNING!!!! This installation will rewrite local dotfiles without savin
 		mkdir -p ~/.vim/autoload ~/.vim/bundle
 		curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
+		echo "~~~~~~~~ installing vim-pathogen..."
+		mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 		echo "~~~~~~~~ installing vim-pathogen bundles..."
 		cd ~/.vim/bundle
 		sed '1,/\"<pathogen>/d;/\"<\/pathogen>/,$d' ~/dev/dotfiles/.vimrc | sed -n 's/^.*\"<bundle>\([^<]*\).*/\1/p' > pathogen-bundles.txt
