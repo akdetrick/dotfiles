@@ -57,12 +57,6 @@ set noexpandtab
 autocmd FileType python setlocal tabstop=4
 autocmd FileType python setlocal shiftwidth=4
 autocmd FileType python setlocal expandtab
-<<<<<<< HEAD
-=======
-autocmd FileType python setlocal tabstop=4
-autocmd FileType python setlocal shiftwidth=4
-autocmd FileType python setlocal expandtab
->>>>>>> master
 
 " Mode stuff
 set history=50
