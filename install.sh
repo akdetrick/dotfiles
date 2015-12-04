@@ -13,6 +13,9 @@ read -p "WARNING!!!! This installation will rewrite local dotfiles without savin
 		mkdir -p ~/.vim/autoload ~/.vim/bundle
 		curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
+		echo "~~~~~~~~ installing vim-pathogen..."
+		mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 		echo "~~~~~~~~ installing vim-pathogen bundles..."
 		cd ~/.vim/bundle
 		sed '1,/\"<pathogen>/d;/\"<\/pathogen>/,$d' ~/dev/dotfiles/.vimrc | sed -n 's/^.*\"<bundle>\([^<]*\).*/\1/p' > pathogen-bundles.txt
@@ -22,6 +25,9 @@ read -p "WARNING!!!! This installation will rewrite local dotfiles without savin
 		done
 		rm pathogen-bundles.txt
 
+		echo "~~~~~~~~ configuring iterm2..."
+		ln -s $DOTFILES_PATH/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
+
 		#echo "~~~~~~~~ installing powerline-bash..."
 		#cd ~/dev/dotfiles/powerline-bash
 		#python install.py
@@ -29,6 +35,9 @@ read -p "WARNING!!!! This installation will rewrite local dotfiles without savin
 
 		#echo "=== NOTE: powerline-bash requires an addition in .bashrc (will fix this later) ==="
 		#echo "=== see https://github.com/akdetrick/powerline-bash/blob/master/README.md ==="
+
+		echo "~~~~~~~~ linking git completion..."
+		ln -s $DOTFILES_PATH/.git-completion.bash ~/.git-completion.bash
 
 	else
 		echo "Aborting installation"

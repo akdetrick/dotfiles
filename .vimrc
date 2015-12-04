@@ -19,6 +19,12 @@ call pathogen#helptags()
 	"<bundle>git://github.com/mattn/emmet-vim.git</bundle>
 	"<bundle>git://github.com/mustache/vim-mustache-handlebars</bundle>
 	"<bundle>git://github.com/derekwyatt/vim-scala</bundle>
+	"<bundle>git://github.com/juvenn/mustache.vim.git</bundle>
+	"<bundle>git://github.com/mattn/emmet-vim.git</bundle>
+	"<bundle>git://github.com/editorconfig/editorconfig-vim.git</bundle>
+	"<bundle>git://github.com/pangloss/vim-javascript.git</bundle>
+	"<bundle>git://github.com/mxw/vim-jsx.git</bundle>
+	"<bundle>git://github.com/scrooloose/syntastic.git</bundle>
 "</pathogen>
 
 " syntax
@@ -31,6 +37,9 @@ autocmd BufRead *.jinc set filetype=jsp
 autocmd BufRead *.email set filetype=velocity
 autocmd BufRead *.email.html set filetype=velocity
 autocmd BufRead *.py set filetype=python
+
+" jsx
+let g:jsx_ext_required = 0
 
 set nocompatible
 
@@ -48,6 +57,12 @@ set noexpandtab
 autocmd FileType python setlocal tabstop=4
 autocmd FileType python setlocal shiftwidth=4
 autocmd FileType python setlocal expandtab
+<<<<<<< HEAD
+=======
+autocmd FileType python setlocal tabstop=4
+autocmd FileType python setlocal shiftwidth=4
+autocmd FileType python setlocal expandtab
+>>>>>>> master
 
 " Mode stuff
 set history=50
@@ -109,9 +124,29 @@ if v:version >= 700
   autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en
 endif
 
+" spelling (text only)
+if v:version >= 700
+  autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en
+  autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en
+endif
+
+" emmet settings
+"let g:user_emmet_install_global = 0
+"autocmd BufNewFile,BufRead *.mustache,*.html,*.jsp EmmetInstall
+
 " indent guides
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#b58900   ctermbg=190
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#cb4b16 ctermbg=166
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
