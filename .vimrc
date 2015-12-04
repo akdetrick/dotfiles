@@ -34,6 +34,9 @@ autocmd BufRead *.email set filetype=velocity
 autocmd BufRead *.email.html set filetype=velocity
 autocmd BufRead *.py set filetype=python
 
+" jsx
+let g:jsx_ext_required = 0
+
 set nocompatible
 
 set path+=/usr/local/meetup/**,~/dev/**
@@ -47,6 +50,9 @@ set shiftwidth=3
 set tabstop=3
 set shiftwidth=3
 set noexpandtab
+autocmd FileType python setlocal tabstop=4
+autocmd FileType python setlocal shiftwidth=4
+autocmd FileType python setlocal expandtab
 autocmd FileType python setlocal tabstop=4
 autocmd FileType python setlocal shiftwidth=4
 autocmd FileType python setlocal expandtab
