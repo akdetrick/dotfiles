@@ -21,7 +21,6 @@ call pathogen#helptags()
 	"<bundle>git://github.com/editorconfig/editorconfig-vim.git</bundle>
 	"<bundle>git://github.com/pangloss/vim-javascript.git</bundle>
 	"<bundle>git://github.com/mxw/vim-jsx.git</bundle>
-	"<bundle>git://github.com/scrooloose/syntastic.git</bundle>
 "</pathogen>
 
 " syntax
@@ -107,7 +106,7 @@ set laststatus=2
 set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
 if has('gui_running')
   set background=dark
-  colorscheme solarized
+  colorscheme macvim
 endif
 
 " spelling (text only)
@@ -127,12 +126,5 @@ let g:indent_guides_start_level = 2
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#b58900   ctermbg=190
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#cb4b16 ctermbg=166
 
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" VimDiff settings
+set diffopt+=iwhite
