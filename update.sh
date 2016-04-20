@@ -3,6 +3,7 @@
 # UPDATE - pulls updates for all installed vim-pathogen bundles; maybe more later
 
 DOTFILES_PATH=~/dev/dotfiles
+BUNDLE_PATH=./bundle
 
 cd $DOTFILES_PATH
 git pull
@@ -17,8 +18,8 @@ done
 rm pathogen-bundles.txt
 
 echo "~~~~~~~~ updating vim bundles..."
-cd ~/.vim/bundle
-for directory in `ls ~/.vim/bundle`
+cd $BUNDLE_PATH
+for directory in `ls $BUNDLE_PATH`
 do
 	echo "Checking for $directory update..."
 	if [ -d "$directory/.git" ]
