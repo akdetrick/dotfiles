@@ -21,6 +21,7 @@ call pathogen#helptags()
 	"<bundle>git://github.com/editorconfig/editorconfig-vim.git</bundle>
 	"<bundle>git://github.com/pangloss/vim-javascript.git</bundle>
 	"<bundle>git://github.com/mxw/vim-jsx.git</bundle>
+	"<bundle>git@github.com:plasticboy/vim-markdown.git</bundle>
 "</pathogen>
 
 " syntax
