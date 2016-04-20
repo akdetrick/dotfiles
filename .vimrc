@@ -21,7 +21,11 @@ filetype plugin on
 
 " WRITING
 let g:pencil#wrapModeDefault = 'soft'   " default is 'hard'
+let g:vim_markdown_folding_disabled = 1
 let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
 
 augroup pencil
 	autocmd!
@@ -58,7 +62,6 @@ set wildmenu
 set wildmode=list:longest
 set visualbell
 set ttyfast
-set foldmethod=marker
 
 " movement
 set ignorecase
