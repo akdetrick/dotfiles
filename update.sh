@@ -8,6 +8,7 @@ cd $DOTFILES_PATH
 git pull
 
 echo "~~~~~~~~ installing new vim-pathogen bundles listed in vimrc..."
+rm -rf ~/.vim/bundle/*
 cd ~/.vim/bundle
 sed '1,/\"<pathogen>/d;/\"<\/pathogen>/,$d' ~/dev/dotfiles/.vimrc | sed -n 's/^.*\"<bundle>\([^<]*\).*/\1/p' > pathogen-bundles.txt
 for REPO in $(cut -d, -f2 < pathogen-bundles.txt)
