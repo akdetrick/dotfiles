@@ -107,7 +107,7 @@ set laststatus=2
 set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
 if has('gui_running')
   set background=dark
-  colorscheme macvim
+  colorscheme zellner
 endif
 
 " spelling (text only)
