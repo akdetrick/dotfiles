@@ -1,3 +1,4 @@
+set shell=/bin/bash
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
@@ -21,6 +22,7 @@ call pathogen#helptags()
 	"<bundle>git://github.com/editorconfig/editorconfig-vim.git</bundle>
 	"<bundle>git://github.com/pangloss/vim-javascript.git</bundle>
 	"<bundle>git://github.com/mxw/vim-jsx.git</bundle>
+	"<bundle>git://github.com/vim-syntastic/syntastic</bundle>
 	"<bundle>git@github.com:plasticboy/vim-markdown.git</bundle>
 "</pathogen>
 
@@ -28,6 +30,8 @@ call pathogen#helptags()
 syntax on
 syntax enable
 filetype plugin indent on
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 " file types
 autocmd BufRead *.jinc set filetype=jsp
