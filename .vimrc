@@ -22,6 +22,7 @@ call pathogen#helptags()
        "<bundle>git://github.com/pangloss/vim-javascript.git</bundle>
        "<bundle>git://github.com/mxw/vim-jsx.git</bundle>
        "<bundle>git://github.com/vim-syntastic/syntastic</bundle>
+       "<bundle>git://github.com/derekwyatt/vim-scala.git</bundle>
        "<bundle>git@github.com:plasticboy/vim-markdown.git</bundle>
 "</pathogen>
 
@@ -144,5 +145,5 @@ hi htmlArg gui=italic
 hi htmlArg cterm=italic
 hi Comment gui=italic
 hi Comment cterm=italic
-autocmd FileType * if &ft!="css"|hi Type gui=italic|endif
-autocmd FileType * if &ft!="css"|hi Type cterm=italic|endif
+autocmd FileType * if &ft!="css" && &ft!="scss"|hi Type gui=italic|endif
+autocmd FileType * if &ft!="css" && &ft!="scss"|hi Type cterm=italic|endif
